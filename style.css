@@ -1,0 +1,131 @@
+body{
+    margin: 0;
+}
+:root{
+    --rowColor:#3a52a4;
+    --buttonColor:#44b750;
+    --redColor:#da382d;
+    --backgroundColor:#e7ebf1;
+}
+.container{
+    height:100vh;
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: 70px auto;
+    grid-template-areas: "nav nav" "aside main";
+}
+nav{
+    grid-area: nav;
+    background-color:var(--rowColor);
+    font-size: 50px;
+    color:white;
+    
+}
+
+aside{
+    grid-area:aside;
+    background-color: var(--backgroundColor);
+}
+
+main{
+    grid-area:main;
+    background-color:var(--backgroundColor);
+}
+
+.checkbox-list{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    row-gap: 8px;
+}
+
+.price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price > p{
+    font-size:14px;
+}
+
+#range{
+    width:100%;
+}
+.category-container{
+    background-color: white;
+    border-radius: 20px;
+    margin:50px auto;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.199);
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(2,auto);
+    gap:10px;
+}
+.product{
+    background-color: white;
+    margin:5px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.199);
+}
+
+.product2{
+    background-color:white;
+    display:grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: auto;
+    grid-column: span 2;
+}
+.image img{
+    width:350px;
+    border-radius: 20px;
+}
+.image{
+    position: relative;
+}
+.image::after{
+    content: "25%";
+    background-color:var(--buttonColor);
+    color: white;
+    padding: 3px 5px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.199) inset;
+    position: absloute;
+}
+button{
+    width:80%;
+    margin:5px;
+    padding:10px;
+    font-size: 20px;
+    border-radius:10px;
+    border:none;
+    color:white;
+    
+}
+
+.btn1{
+   background-color:var(--buttonColor);
+}
+.btn2{
+    background-color: var(--rowColor);
+}
+.product-content{
+    position:relative;
+}
+.product-content h2 span{
+    color:var(--redColor);
+}
+.product2 img{
+    height:100%;
+}
+.product-content::after{
+    content: "Suggested For You";
+    background-color: var(--redColor);
+    color:white;
+    padding: 3px 5px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.199) inset;
+    position: absloute;
+}
